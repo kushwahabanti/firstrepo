@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rohtas Fort</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+/* ================= HERO ================= */
+.hero{
+  height:70vh;
+  background:
+    linear-gradient(to right,
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.2),
+      rgba(0,0,0,0)
+    ),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  padding-left:8%;
+  position:relative;
+}
+
+.back-btn{
+  position:absolute;
+  top:20px;
+  left:20px;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  padding:10px 18px;
+  border-radius:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.hero-content{
+  color:white;
+  max-width:650px;
+}
+
+.hero-content h1{
+  font-size:60px;
+  margin-bottom:10px;
+}
+
+.hero-content h3{
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.hero-content p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+/* ================= OVERVIEW ================= */
+.overview{
+  background:#f6f2e9;
+  padding:60px 8%;
+}
+
+.overview h2{
+  font-size:32px;
+  margin-bottom:20px;
+  color:#2c3e50;
+}
+
+.overview p{
+  font-size:18px;
+  line-height:1.8;
+  color:#444;
+  max-width:900px;
+}
+
+/* INFO GRID (optional but looks very official) */
+.info-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.info-box{
+  background:#f6f2e9;
+  padding:20px;
+  border-radius:14px;
+}
+
+.info-box h4{
+  margin-bottom:8px;
+  color:#1f4d1f;
+}
+
+/* ================= GALLERY ================= */
+.gallery{
+  column-count:4;
+  column-gap:16px;
+  padding:20px;
+  background:#f6f2e9;
+}
+
+.gallery img{
+  width:100%;
+  margin-bottom:16px;
+  border-radius:12px;
+  break-inside:avoid;
+  cursor:pointer;
+  transition:transform .3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+}
+
+/* ================= FULLSCREEN VIEWER ================= */
+.viewer{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.viewer img{
+  max-width:85%;
+  max-height:85%;
+  border-radius:10px;
+}
+
+.arrow{
+  position:absolute;
+  top:50%;
+  font-size:60px;
+  color:white;
+  cursor:pointer;
+  padding:20px;
+  user-select:none;
+}
+
+.left{ left:20px; }
+.right{ right:20px; }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1024px){ .gallery{column-count:3;} }
+@media(max-width:768px){
+  .gallery{column-count:2;}
+  .hero-content h1{font-size:42px;}
+}
+@media(max-width:480px){ .gallery{column-count:1;} }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <a href="ghumo rohtash.html" class="back-btn">← Back to Home</a>
+  <div class="hero-content">
+    <h1>Rohtas Fort</h1>
+    <h3>Sasaram, Bihar</h3>
+    <p>
+      Rohtas Fort is a historic fort known for its massive walls,
+      scenic views, trekking routes, and rich history.
+    </p>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="overview">
+  <h2>Overview</h2>
+  <p>
+    Rohtas Fort, also known as Rohtasgarh Fort, is one of the most
+    significant historical monuments in Bihar. Built by Sher Shah
+    Suri in the 16th century, the fort stands on the Kaimur plateau
+    and is surrounded by lush forests and dramatic landscapes.
+    It attracts tourists, history lovers, photographers, and
+    adventure seekers alike.
+  </p>
+
+  <div class="info-grid">
+    <div class="info-box">
+      <h4>📍 Location</h4>
+      <p>Sasaram, Rohtas District, Bihar</p>
+    </div>
+
+    <div class="info-box">
+      <h4>🕰 Best Time</h4>
+      <p>October to March</p>
+    </div>
+
+    <div class="info-box">
+      <h4>🎟 Entry Fee</h4>
+      <p>Free</p>
+    </div>
+
+    <div class="info-box">
+      <h4>🏛 Built By</h4>
+      <p>Sher Shah Suri</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1">
+</section>
+
+<!-- FULLSCREEN VIEWER -->
+<div class="viewer" id="viewer">
+  <span class="arrow left" onclick="change(-1)">❮</span>
+  <img id="viewerImg">
+  <span class="arrow right" onclick="change(1)">❯</span>
+</div>
+
+<script>
+const imgs = document.querySelectorAll(".gallery img");
+const viewer = document.getElementById("viewer");
+const viewerImg = document.getElementById("viewerImg");
+let i = 0;
+
+imgs.forEach((img,index)=>{
+  img.onclick = ()=>{ i=index; openViewer(); };
+});
+
+function openViewer(){
+  viewer.style.display="flex";
+  viewerImg.src = imgs[i].src;
+}
+
+function change(step){
+  i = (i + step + imgs.length) % imgs.length;
+  viewerImg.src = imgs[i].src;
+}
+
+viewer.onclick = e => {
+  if(e.target === viewer) viewer.style.display="none";
+};
+</script>
+
+</body>
+</html>

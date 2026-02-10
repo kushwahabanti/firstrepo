@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohtas District Tourism</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-image: url('https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg'); /* Replace with actual URL */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            width: 80%;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .content .attractions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .attraction {
+            width: 220px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .attraction img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .attraction h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .attraction p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#plan">Plan Your Visit</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div>
+            <h1>Welcome to Rohtas District</h1>
+            <p>Explore the historic forts, scenic waterfalls, and cultural heritage of Rohtas, Bihar.</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content" id="attractions">
+        <h2>Top Attractions</h2>
+        <div class="attractions">
+           <a href="rohtashfort.html" style="text-decoration:none; color:inherit;">
+              <div class="attraction">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+              <h3>Rohtas Fort</h3>
+              <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+              </div>
+            </a> 
+            <a href="serhgarhfort.html" style="text-decoration:none; color:inherit;">
+               <div class="attraction">
+                <img src="https://cdn.s3waas.gov.in/s3cbcb58ac2e496207586df2854b17995f/uploads/bfi_thumb/2022011320-scaled-pixydsuha18lijhc6hhyk74b10n4jr0iw04t02xqiy.jpg" alt="Shergarh Fort">
+                <h3>Shergarh Fort</h3>
+                <p>Experience the historic beauty of the fort built by Sher Shah Suri.</p>
+                </div>
+            </a>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS65FNw7MqOq0-_YCKvgJF-ebNqeGcpPNqMiA&s" alt="Gupta Dham">
+                <h3>Gupta Dham</h3>
+                <p>Visit the ancient cave temple on the Kaimur hills, a place of devotion.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://rohtasdistrict.com/wp-content/uploads/2021/07/manjhar-kund-waterfall-1.jpg" alt="Dhua Kund">
+                <h3>Manjhar Kund </h3>
+                <p>Relax by the beautiful waterfalls, especially enchanting during monsoon.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Durgavati_dam.jpg/1200px-Durgavati_dam.jpg?20221106060753" alt="Rohtas Fort">
+                <h3>Karamchat Dam</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/GW4g0sfa8AEjqfS?format=png&name=900x900" alt="Rohtas Fort">
+                <h3>Dhua Kund</h3>
+                <p>Relax by the beautiful waterfalls, especially enchanting during monsoon.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/FLlfYmTVkAQdOch.jpg" alt="Rohtas Fort">
+                <h3>MAA Tarachandi Dham</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtY2cZpFEH-ZZTcmHQWd74pX-KIFOMhOXKA&s" alt="Rohtas Fort">
+                <h3>Indrapuri Baraj</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjM1RxkYmJ_lGHh6R86RUaniCXfXE-Fs9z_w&s" alt="Rohtas Fort">
+                <h3>Kashish Waterfall</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/Ed5v6ZnUEAAoVEU.jpg" alt="Rohtas Fort">
+                <h3>Maa Tutula Bhawani mandir and Waterfall</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div> 
+            <div class="attraction">
+                <img src="https://rohtasdistrict.com/wp-content/uploads/2021/01/pilot-baba-aashram-sasaram.jpeg" alt="Rohtas Fort">
+                <h3>Plot baba dham</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg" alt="Rohtas Fort">
+                <h3>Sher Sah Suri Tomb</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGYftzfUN1LZ_H_fS1R5wDsj78YlKV5JX-A&s" alt="Rohtas Fort">
+                <h3>Maa Mundeswari Mandir</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Rohtas District Tourism. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
