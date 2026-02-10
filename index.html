@@ -16,46 +16,6 @@
             font-family: Arial, sans-serif;
             color: #333;
         }
-        /* Blog Section */
-.blog-section {
-    padding: 40px;
-    background-color: #f9f9f9;
-    display: none;
-    text-align: center;
-}
-
-.blog-section img {
-    width: 80%;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.blog-section p {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #666;
-}
-
-.blog-section .back-to-attractions {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.blog-section .back-to-attractions:hover {
-    background-color: #555;
-}
-
-/* Hidden class */
-.hidden {
-    display: none;
-}
-
 
         /* Navbar */
         .navbar {
@@ -63,105 +23,45 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            background-color: #63894d;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #333;
         }
 
         .navbar a {
             color: white;
             padding: 10px 15px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background-color 0.3s, color 0.3s;
         }
 
         .navbar a:hover {
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #555;
             border-radius: 5px;
-        }
-
-        .navbar .logo {
-            font-size: 2rem;
-            color: #31a4b8;
-            font-weight: bold;
-        }
-
-        .navbar .menu {
-            display: flex;
-            gap: 15px;
         }
 
         /* Banner Section */
         .banner {
-            position: relative;
-            overflow: hidden;
-            height: 800px;
-        }
-
-        .banner img {
-            width: 100%;
-            height: 800px;
-            object-fit: cover;
-            position: absolute;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .banner img.hidden {
-            opacity: 0;
-        }
-
-        .banner img.visible {
-            opacity: 1;
-        }
-
-        .banner-controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg'); /* Replace with actual URL */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
             display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .banner-controls button {
-            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
+            text-align: center;
         }
 
-        .banner-controls button:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        /* Welcome Note */
-        .welcome-note {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgb(160, 241, 152);
-        text-align: center;
-        #background-color: rgba(139, 134, 134, 0.6);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        .banner h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-       .welcome-note h1 {
-       font-size: 2.5rem;
-       margin-bottom: 10px;
-       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-       }
-
-      .welcome-note p {
-      font-size: 1.2rem;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-      }
+        .banner p {
+            font-size: 1.2em;
+            width: 80%;
+            max-width: 600px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
         /* Main Content */
         .content {
@@ -179,61 +79,15 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            
         }
-        /* Attractions Section with Background Image */
-#attractions {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s'); /* Replace with your desired image URL */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 40px 20px;
-    color: white; /* Ensures text is visible against the background */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow for better text readability */
-}
-
-#attractions h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.attractions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.attraction {
-    width: 200px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for attraction cards */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: #333; /* Override text color inside cards */
-}
-
-.attraction h3 {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-.attraction p {
-    font-size: 0.9em;
-    color: #666;
-}
-
 
         .attraction {
-            width: 200px;
+            width: 220px;
             padding: 20px;
-            background-color: #76d3d6;
+            background-color: #f4f4f4;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
-            cursor: pointer;
         }
 
         .attraction img {
@@ -251,56 +105,6 @@
             color: #666;
         }
 
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 20;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .modal-content img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .modal-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .modal-content p {
-            margin-bottom: 20px;
-        }
-
-        .modal-close {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .modal-close:hover {
-            background-color: #555;
-        }
-
         /* Footer */
         .footer {
             text-align: center;
@@ -309,48 +113,22 @@
             color: white;
             margin-top: 20px;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar .menu {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .content .attractions {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
     <div class="navbar">
-        <div class="logo">Rohtas Tourism </div>
-        <div> <class="menu">
-            <a href="#home">Home</a>
-            <a href="#attractions">Attractions</a>
-            <a href="#plan">Plan Your Visit</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <a href="#home">Home</a>
+        <a href="#attractions">Attractions</a>
+        <a href="#plan">Plan Your Visit</a>
+        <a href="#contact">Contact</a>
     </div>
-
     <!-- Banner Section -->
-    <div class="banner" id="banner">
-        <img src="https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg" class="visible" alt="Banner 1">
-        <img src="https://pbs.twimg.com/media/Ed5v6ZnUEAAoVEU?format=jpg&name=medium" class="hidden" alt="Banner 2">
-        <img src="https://pbs.twimg.com/media/GW4g0sfa8AEjqfS?format=png&name=900x900" class="hidden" alt="Banner 3">
-        
-        <div class="welcome-note">
-            <h1>Welcome to Rohtas District Tourism</h1>
-            <p>Discover the heritage, beauty, and culture of Rohtas.</p>
-        </div>
-        
-        <div class="banner-controls">
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
+    <div class="banner">
+        <div>
+            <h1>Welcome to Rohtas District</h1>
+            <p>Explore the historic forts, scenic waterfalls, and cultural heritage of Rohtas, Bihar.</p>
         </div>
     </div>
 
@@ -358,41 +136,115 @@
     <div class="content" id="attractions">
         <h2>Top Attractions</h2>
         <div class="attractions">
-            <div class="attraction" data-title="Rohtas Fort" data-description="Discover the majestic fort on the Kaimur hills with breathtaking views." data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s">
+           <a href="rohtashfort.html" style="text-decoration:none; color:inherit;">
+              <div class="attraction">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+              <h3>Rohtas Fort</h3>
+              <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+              </div>
+            </a> 
+            <a href="serhgarhfort.html" style="text-decoration:none; color:inherit;">
+               <div class="attraction">
+                <img src="https://cdn.s3waas.gov.in/s3cbcb58ac2e496207586df2854b17995f/uploads/bfi_thumb/2022011320-scaled-pixydsuha18lijhc6hhyk74b10n4jr0iw04t02xqiy.jpg" alt="Shergarh Fort">
+                <h3>Shergarh Fort</h3>
+                <p>Experience the historic beauty of the fort built by Sher Shah Suri.</p>
+                </div>
+            </a>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS65FNw7MqOq0-_YCKvgJF-ebNqeGcpPNqMiA&s" alt="Gupta Dham">
+                <h3>Gupta Dham</h3>
+                <p>Visit the ancient cave temple on the Kaimur hills, a place of devotion.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://rohtasdistrict.com/wp-content/uploads/2021/07/manjhar-kund-waterfall-1.jpg" alt="Dhua Kund">
+                <h3>Manjhar Kund </h3>
+                <p>Relax by the beautiful waterfalls, especially enchanting during monsoon.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Durgavati_dam.jpg/1200px-Durgavati_dam.jpg?20221106060753" alt="Rohtas Fort">
+                <h3>Karamchat Dam</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/GW4g0sfa8AEjqfS?format=png&name=900x900" alt="Rohtas Fort">
+                <h3>Dhua Kund</h3>
+                <p>Relax by the beautiful waterfalls, especially enchanting during monsoon.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/FLlfYmTVkAQdOch.jpg" alt="Rohtas Fort">
+                <h3>MAA Tarachandi Dham</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtY2cZpFEH-ZZTcmHQWd74pX-KIFOMhOXKA&s" alt="Rohtas Fort">
+                <h3>Indrapuri Baraj</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjM1RxkYmJ_lGHh6R86RUaniCXfXE-Fs9z_w&s" alt="Rohtas Fort">
+                <h3>Kashish Waterfall</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://pbs.twimg.com/media/Ed5v6ZnUEAAoVEU.jpg" alt="Rohtas Fort">
+                <h3>Maa Tutula Bhawani mandir and Waterfall</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div> 
+            <div class="attraction">
+                <img src="https://rohtasdistrict.com/wp-content/uploads/2021/01/pilot-baba-aashram-sasaram.jpeg" alt="Rohtas Fort">
+                <h3>Plot baba dham</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg" alt="Rohtas Fort">
+                <h3>Sher Sah Suri Tomb</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGYftzfUN1LZ_H_fS1R5wDsj78YlKV5JX-A&s" alt="Rohtas Fort">
+                <h3>Maa Mundeswari Mandir</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
                 <h3>Rohtas Fort</h3>
                 <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
-                <button class="read-more" data-blog="rohtas-fort-blog">Read More</button>
             </div>
-            <!-- Add more attractions similarly -->
-        </div>
-    </div>
-    
-    <!-- Detailed Blog Section -->
-    <div class="blog-section hidden" id="rohtas-fort-blog">
-        <h2>Rohtas Fort</h2>
-        <div class="blog-images">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&" alt="roktash fort">
-            <img src="https://via.placeholder.com/800x600" alt="Rohtas Fort 2">
-            <img src="https://via.placeholder.com/800x600" alt="Rohtas Fort 3">
-        </div>
-        <p>
-            Rohtas Fort is a majestic historical site located in the Kaimur hills. Built during the reign of Sher Shah Suri, it stands as a symbol of architectural brilliance and cultural heritage. Explore the fort's vast courtyards, intricate carvings, and breathtaking views of the surrounding landscapes.
-        </p>
-        <button class="back-to-attractions">Back to Attractions</button>
-    </div>
-    
-            <!-- Additional attractions here -->
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <img id="modal-image" src="" alt="">
-            <h3 id="modal-title"></h3>
-            <p id="modal-description"></p>
-            <button class="modal-close" id="modal-close">Close</button>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
+            <div class="attraction">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s" alt="Rohtas Fort">
+                <h3>Rohtas Fort</h3>
+                <p>Discover the majestic fort on the Kaimur hills with breathtaking views.</p>
+            </div>
         </div>
     </div>
 
@@ -400,74 +252,6 @@
     <div class="footer">
         <p>&copy; 2024 Rohtas District Tourism. All rights reserved.</p>
     </div>
-
-    <script>
-        const banners = document.querySelectorAll('#banner img');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        let currentIndex = 0;
-
-        function updateBanner(index) {
-            banners.forEach((banner, i) => {
-                banner.classList.remove('visible');
-                banner.classList.add('hidden');
-                if (i === index) {
-                    banner.classList.remove('hidden');
-                    banner.classList.add('visible');
-                }
-            });
-        }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + banners.length) % banners.length;
-            updateBanner(currentIndex);
-        });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % banners.length;
-            updateBanner(currentIndex);
-        });
-
-        const attractions = document.querySelectorAll('.attraction');
-        const modal = document.getElementById('modal');
-        const modalImage = document.getElementById('modal-image');
-        const modalTitle = document.getElementById('modal-title');
-        const modalDescription = document.getElementById('modal-description');
-        const modalClose = document.getElementById('modal-close');
-
-        attractions.forEach(attraction => {
-            attraction.addEventListener('click', () => {
-                modalImage.src = attraction.dataset.image;
-                modalTitle.textContent = attraction.dataset.title;
-                modalDescription.textContent = attraction.dataset.description;
-                modal.style.display = 'flex';
-            });
-        });
-
-        modalClose.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
-        const readMoreButtons = document.querySelectorAll('.read-more');
-const blogSections = document.querySelectorAll('.blog-section');
-const backButtons = document.querySelectorAll('.back-to-attractions');
-const attractionsSection = document.querySelector('.attractions');
-
-readMoreButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const blogId = button.dataset.blog;
-        document.getElementById(blogId).classList.remove('hidden');
-        attractionsSection.classList.add('hidden');
-    });
-});
-
-backButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        blogSections.forEach(section => section.classList.add('hidden'));
-        attractionsSection.classList.remove('hidden');
-    });
-});
-
-    </script>
 
 </body>
 </html>
