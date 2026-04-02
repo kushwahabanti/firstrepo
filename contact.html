@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Rohtas District Tourism for travel inquiries, feedback, and local guidance. Reach out via form, email, or phone.">
+    <title>Contact Us | Rohtas District Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand"><span>🏛</span> Rohtas Tourism</a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="plan-visit.html">Plan Visit</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Hero -->
+    <section class="plan-hero" style="background-image:url('https://cdn.pixabay.com/photo/2022/03/11/15/40/mausoleum-7062500_1280.jpg');">
+        <div class="plan-hero-content">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you — questions, feedback, or travel advice.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="contact-grid">
+                <!-- Form -->
+                <div class="fade-up">
+                    <h2 class="section-title" style="text-align:left;font-size:2rem;margin-bottom:8px;">Send a <span>Message</span></h2>
+                    <p style="color:var(--text-muted);margin-bottom:30px;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="travel">Travel Advice</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="collaboration">Collaboration</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="fade-up">
+                    <h2 class="section-title" style="text-align:left;font-size:2rem;margin-bottom:8px;">Get in <span>Touch</span></h2>
+                    <p style="color:var(--text-muted);margin-bottom:30px;">You can also reach us through the following channels.</p>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>District Tourism Office<br>Sasaram, Rohtas District<br>Bihar 821115, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@rohtastourism.in<br>tourism.rohtas@gov.in</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 6184 XXXXXX<br>Mon–Sat, 10 AM – 5 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-icon">🕐</div>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday – Saturday<br>10:00 AM – 5:00 PM IST</p>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115238.75!2d84.0!3d24.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d3e6f17898b35%3A0x7cf3d6c3f4e82e8d!2sSasaram%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Map showing Sasaram, Rohtas District">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">🏛 Rohtas Tourism</div>
+                    <p class="footer-about">Explore the rich heritage, stunning natural beauty, and spiritual significance of Rohtas District, Bihar.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="plan-visit.html">Plan Visit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Top Attractions</h4>
+                    <ul>
+                        <li><a href="attraction.html?id=rohtas-fort">Rohtas Fort</a></li>
+                        <li><a href="attraction.html?id=sher-shah-suri-tomb">Sher Shah Suri Tomb</a></li>
+                        <li><a href="attraction.html?id=manjhar-kund">Manjhar Kund</a></li>
+                        <li><a href="attraction.html?id=mundeswari-mandir">Mundeswari Mandir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 Sasaram, Rohtas, Bihar</li>
+                        <li>📧 info@rohtastourism.in</li>
+                        <li>📞 +91 6184 XXXXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Rohtas District Tourism. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

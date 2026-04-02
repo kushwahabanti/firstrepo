@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all attractions in Rohtas District — forts, waterfalls, temples, and dams. Filter by category and plan your visit.">
+    <title>All Attractions | Rohtas District Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand"><span>🏛</span> Rohtas Tourism</a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="attractions.html" class="active">Attractions</a>
+            <a href="plan-visit.html">Plan Visit</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="plan-hero" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6shQnN_om_8jmxawKsCM-W3xUk-ETz6_Sw&s');">
+        <div class="plan-hero-content">
+            <h1>All Attractions</h1>
+            <p>Explore every destination Rohtas has to offer — forts, waterfalls, temples, and more.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <!-- Search Bar -->
+            <div class="search-wrapper fade-up">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="search-input" placeholder="Search attractions by name, type, or location...">
+                <button class="search-clear" id="search-clear">✕</button>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs fade-up">
+                <button class="filter-tab active" data-category="all">All Places</button>
+                <button class="filter-tab" data-category="fort">🏰 Forts & Monuments</button>
+                <button class="filter-tab" data-category="waterfall">💧 Waterfalls</button>
+                <button class="filter-tab" data-category="temple">🛕 Temples</button>
+                <button class="filter-tab" data-category="dam">🌊 Dams & Barrages</button>
+            </div>
+
+            <!-- Grid (rendered by JS) -->
+            <div class="grid" id="attractions-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">🏛 Rohtas Tourism</div>
+                    <p class="footer-about">Explore the rich heritage, stunning natural beauty, and spiritual significance of Rohtas District, Bihar.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="plan-visit.html">Plan Visit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Top Attractions</h4>
+                    <ul>
+                        <li><a href="attraction.html?id=rohtas-fort">Rohtas Fort</a></li>
+                        <li><a href="attraction.html?id=sher-shah-suri-tomb">Sher Shah Suri Tomb</a></li>
+                        <li><a href="attraction.html?id=manjhar-kund">Manjhar Kund</a></li>
+                        <li><a href="attraction.html?id=mundeswari-mandir">Mundeswari Mandir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 Sasaram, Rohtas, Bihar</li>
+                        <li>📧 info@rohtastourism.in</li>
+                        <li>📞 +91 6184 XXXXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Rohtas District Tourism. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Render all cards on load
+        renderCards('#attractions-grid', attractions);
+    </script>
+</body>
+</html>

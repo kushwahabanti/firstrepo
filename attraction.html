@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore this attraction in Rohtas District, Bihar — history, overview, gallery, and travel info.">
+    <title>Attraction | Rohtas District Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand"><span>🏛</span> Rohtas Tourism</a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="attractions.html" class="active">Attractions</a>
+            <a href="plan-visit.html">Plan Visit</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <!-- Detail Hero (populated by JS) -->
+    <section class="detail-hero" id="detail-hero">
+        <a href="attractions.html" class="back-btn">← All Attractions</a>
+        <div class="detail-hero-content">
+            <h1 id="attr-name">Loading...</h1>
+            <p id="attr-tagline"></p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Overview -->
+        <section class="section" style="background:var(--bg-warm);">
+            <div class="container" style="max-width:960px;">
+                <h2 class="section-title fade-up">Overview</h2>
+                <p id="attr-overview" class="fade-up" style="font-size:1.1rem;line-height:1.9;color:var(--text-muted);margin-top:20px;">Loading...</p>
+
+                <div class="info-grid fade-up" id="attr-info-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-section">
+            <h2 class="fade-up">Photo Gallery</h2>
+            <div class="gallery-grid" id="attr-gallery">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- More Attractions -->
+        <section class="section">
+            <div class="section-header fade-up">
+                <span class="section-tag">Keep Exploring</span>
+                <h2 class="section-title">More <span>Attractions</span></h2>
+            </div>
+            <div class="grid" id="more-grid"></div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-arrow lightbox-left">❮</span>
+        <img id="lightbox-img" alt="Gallery image">
+        <span class="lightbox-arrow lightbox-right">❯</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">🏛 Rohtas Tourism</div>
+                    <p class="footer-about">Explore the rich heritage, stunning natural beauty, and spiritual significance of Rohtas District, Bihar.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="attractions.html">Attractions</a></li>
+                        <li><a href="plan-visit.html">Plan Visit</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Top Attractions</h4>
+                    <ul>
+                        <li><a href="attraction.html?id=rohtas-fort">Rohtas Fort</a></li>
+                        <li><a href="attraction.html?id=sher-shah-suri-tomb">Sher Shah Suri Tomb</a></li>
+                        <li><a href="attraction.html?id=manjhar-kund">Manjhar Kund</a></li>
+                        <li><a href="attraction.html?id=mundeswari-mandir">Mundeswari Mandir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 Sasaram, Rohtas, Bihar</li>
+                        <li>📧 info@rohtastourism.in</li>
+                        <li>📞 +91 6184 XXXXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Rohtas District Tourism. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Read ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const attr = getAttraction(id);
+
+        if (attr) {
+            // Update page title
+            document.title = `${attr.name} | Rohtas District Tourism`;
+            document.querySelector('meta[name="description"]').content = attr.overview.substring(0, 160);
+
+            // Hero
+            document.getElementById('detail-hero').style.backgroundImage = `url('${attr.heroImage}')`;
+            document.getElementById('attr-name').textContent = attr.name;
+            document.getElementById('attr-tagline').textContent = attr.tagline;
+
+            // Overview
+            document.getElementById('attr-overview').textContent = attr.overview;
+
+            // Info grid
+            document.getElementById('attr-info-grid').innerHTML = `
+                <div class="info-box">
+                    <h4>📍 Location</h4>
+                    <p>${attr.location}</p>
+                </div>
+                <div class="info-box">
+                    <h4>🕰️ Best Time</h4>
+                    <p>${attr.bestTime}</p>
+                </div>
+                <div class="info-box">
+                    <h4>🎟️ Entry Fee</h4>
+                    <p>${attr.entryFee}</p>
+                </div>
+                <div class="info-box">
+                    <h4>🏛️ Origin</h4>
+                    <p>${attr.builtBy}</p>
+                </div>
+            `;
+
+            // Gallery
+            document.getElementById('attr-gallery').innerHTML = attr.gallery.map(
+                src => `<img src="${src}" alt="${attr.name} gallery photo" loading="lazy">`
+            ).join('');
+
+            // More attractions (exclude current, show 3)
+            const others = attractions.filter(a => a.id !== id);
+            // Shuffle and pick 3
+            const shuffled = others.sort(() => 0.5 - Math.random()).slice(0, 3);
+            renderCards('#more-grid', shuffled);
+
+            // Re-init lightbox after gallery loaded
+            initLightbox();
+        } else {
+            document.getElementById('attr-name').textContent = 'Attraction Not Found';
+            document.getElementById('attr-overview').textContent = 'Sorry, we could not find the attraction you were looking for. Please go back to the attractions page.';
+        }
+    </script>
+</body>
+</html>
